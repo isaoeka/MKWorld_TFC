@@ -1,0 +1,16 @@
+<div class="header opacity9 kadomaru">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <img src="[% icon  %]" alt="logo" class="icon col-xs-3" id="header_icon"/>
+        <div class="col-xs-6 status" >
+          <div class="" id="header_username">なまえ: [% name %]</div>
+          <div class="" id="header_shogo">しょうごう: [% shogo %]</div>
+        </div>
+        <div class="col-xs-3 stage" >
+          <p>[% stage %]</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

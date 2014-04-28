@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+
+		<!-- CSS /  Bootstrap -->
+		<link rel='stylesheet' type='text/css' href="../static/bootstrap/css/bootstrap.min.css">
+		<link rel='stylesheet' type='text/css' href="../static/css/main.css">
+		<link rel='stylesheet' type='text/css' href="../static/css/stage.css">
+
+		<script type='text/javascript' src='/static/js/jquery-1.7.2.min.js'></script>
+		<script type='text/javascript' src='/static/js/stage.js'></script>
+
+		<title>まっくら|すてーじ</title>
+	</head>
+	<body>
+
+		[% INCLUDE "_header/header.tt" %]
+
+		<!-- メインコンテンツ  -->
+		<div class="container">
+			<div id='message' class='center'>
+				<p>五反田ステージ</p>
+			</div>
+			<div id='detail'>
+				<p>ステージの詳細</p>
+			</div>
+			<div id='message' class='center'>
+				<p>プレイしますか？</p>
+			</div>
+			<div id='left' class="col-xs-12 center">
+				<a href="/game" class="btn btn-primary btn-lg" role="button">Yes</a>
+			</div>
+			<div id='right' class="col-xs-12 center">
+				<a href="/select" class="btn btn-primary btn-lg" role="button">No</a>
+			</div>
+			<div id='message' class='center'>
+				<p>五反田ランキング</p>
+			</div>
+			<div id='bottom' class="col-xs-12 center">
+				<a href="/ranking" class="btn btn-primary btn-lg" role="button">Your rank</a>
+			</div>
+
+		</div><!-- .container -->
+
+		[% INCLUDE "_footer/footer.tt" %]
+
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="../static/bootstrap/js/bootstrap.min.js"></script>
+		<script>
+			$(function(){
+
+				// ステータスバー（検索ボックスなど）を消す(上げる)
+				$("body").animate({scrollTop:0});
+
+				// 画面の高さを取得して、変数wHに代入
+				var wH = $(window).height();
+
+				//
+				var header_h    = $('div.header').outerHeight();
+				var container_h = $('div.container').outerHeight();
+				var footer_h    = $('div.footer').outerHeight();
+
+				var height = wH - footer_h;
+
+				$('body > div.container').css('height', height+'px');
+			});
+		</script>
+	</body>
+</html>
+

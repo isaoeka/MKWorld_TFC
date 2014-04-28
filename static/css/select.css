@@ -1,0 +1,22 @@
+.center {
+	text-align: center;
+}
+
+.container #title {
+}
+
+.container #map_div {
+	position: relative;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	margin-bottom: -20px;
+}
+
+.container #map_div #map {
+	position: absolute;
+	display: table-cell;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}

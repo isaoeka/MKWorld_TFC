@@ -1,0 +1,21 @@
+requires 'Amon2::Lite';
+requires 'Amon2::Auth';
+requires 'DBD::mysql';
+requires 'DBIx::Sunny';
+requires 'DBI';
+requires 'Digest::MD5';
+requires 'Config::Pit';
+
+requires 'File::Spec';
+requires 'File::Basename';
+requires 'Plack';
+requires 'Plack::Session::Store::File';
+requires 'Plack::Session::State::Cookie';
+requires 'Net::OAuth';
+requires 'Text::Xslate';
+requires 'Log::Minimal';
+requires 'URI';
+requires 'LWP::UserAgent';
+requires 'HTTP::Request';
+requires 'Net::Twitter';
+requires 'Digest::MD5';

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- CSS /  Bootstrap -->
+    <link rel='stylesheet' type='text/css' href="../static/bootstrap/css/bootstrap.min.css">
+    <link rel='stylesheet' type='text/css' href="../static/css/main.css">
+
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <title>まっくら|めにゅー</title>
+  </head>
+  <body>
+
+    [% INCLUDE "_header/header.tt" %]
+
+
+    <div class="container">
+
+      <ul>
+        <li><a href="/logout" class="btn btn-primary btn-lg" role="button">ログアウト</a></li>
+      </ul>
+
+    </div>
+
+    [% INCLUDE "_footer/footer.tt" %]
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- JQuery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../static/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+      $(function(){
+
+        // ステータスバー（検索ボックスなど）を消す(上げる)
+        $("body").animate({scrollTop:0});
+
+        // 画面の高さを取得して、変数wHに代入
+        var wH = $(window).height();
+
+        //
+        var header_h    = $('div.header').outerHeight();
+        var container_h = $('div.container').outerHeight();
+        var footer_h    = $('div.footer').outerHeight();
+
+        var height = wH - footer_h;
+
+        $('body > div.container').css('height', height+'px');
+
+
+      });
+    </script>
+  </body>
+</html>

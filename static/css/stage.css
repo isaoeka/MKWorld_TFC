@@ -1,0 +1,29 @@
+
+.center {
+	text-align: center;
+}
+
+.container #message {
+}
+
+.container #title {
+}
+
+.container #detail {
+	border-style: dashed;
+	margin-bottom: 10px;
+}
+
+.container #left {
+	float: left;
+	width: 48%;
+}
+
+.container #right {
+	float: right;
+	width: 48%;
+}
+
+.container #bottom {
+	width: 100%;
+}

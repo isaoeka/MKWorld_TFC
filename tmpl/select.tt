@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+
+		<!-- CSS /  Bootstrap -->
+		<link rel='stylesheet' type='text/css' href="../static/bootstrap/css/bootstrap.min.css">
+		<link rel='stylesheet' type='text/css' href="../static/css/main.css">
+		<link rel='stylesheet' type='text/css' href="../static/css/select.css">
+
+		<script type='text/javascript' src="/static/js/jquery-1.7.2.min.js"></script>
+		<script type='text/javascript' src='/static/js/jquery.rwdImageMaps.min.js'></script>
+		<script type="text/javascript" src='/static/js/select.js'></script>
+
+    <title>まっくら|わーるどせれくと</title>
+  </head>
+  <body onLoad="drawRegionsMap()">
+
+		[% INCLUDE "_header/header.tt" %]
+
+		<!-- メインコンテンツ  -->
+		<div class="container">
+			<div id='title' class='center'>
+				<p>ワールドセレクト</p>
+			</div>
+			<div id='map_div'>
+				<img id='map' src='/static/img/japan(provinces).png' usemap='#select_world'>
+				<map name='select_world'>
+					<area shape='poly' coords='703,742,725,749,750,747,754,759,747,759,745,767,731,760,730,766,712,757,701,746' href='/stage'>
+				</map>
+			</div>
+			<div class='col-xs-12 center'>
+				<a href="/stage" class="btn btn-primary btn-lg" role="button">MyPlace</a>
+			</div>
+
+		</div><!-- .container -->
+
+		[% INCLUDE "_footer/footer.tt" %]
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="../static/bootstrap/js/bootstrap.min.js"></script>
+		<script>
+			$(function(){
+
+				// ステータスバー（検索ボックスなど）を消す(上げる)
+				$("body").animate({scrollTop:0});
+
+				// 画面の高さを取得して、変数wHに代入
+				var wH = $(window).height();
+
+				//
+				var header_h    = $('div.header').outerHeight();
+				var container_h = $('div.container').outerHeight();
+				var footer_h    = $('div.footer').outerHeight();
+
+				var height = wH - footer_h;
+
+				$('body > div.container').css('height', height+'px');
+
+			});
+		</script>
+
+	</body>
+</html>
+

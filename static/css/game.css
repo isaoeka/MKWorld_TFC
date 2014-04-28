@@ -1,0 +1,79 @@
+/* MapとCanvas */
+.content {
+	display: table;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+.content {
+	display: table;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+}
+
+.content #black_world {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.content #black_world #map_canvas {
+	position: absolute;
+	display: table-cell;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+
+.content #black_world #view {
+	position: absolute;
+	display: table-cell;
+	top: 0;
+	left: 0;
+	vertical-align: middle;
+}
+
+.content #black_world #blocks {
+	position: absolute;
+	display: table-cell;
+	top: 0;
+	left: 0;
+	vertical-align: middle;
+}
+
+/* フッター */
+.footer #action {
+	height: 90px;
+}
+
+.footer #action div {
+	text-align: center;
+}
+
+.footer #action button {
+	margin: 1px;
+	font-size: 13px;
+}
+
+.footer #action #percentage {
+	margin: 1px;
+	font-size: 15px;
+}
+
+.footer #action #bottom #clear_button {
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+
+#left { width: 32%; float: left;}
+#center1 { width: 64%; float: right;}
+#center2 { width: 48%; float: left;}
+#right { width: 48%; float: right;}

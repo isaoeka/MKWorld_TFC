@@ -1,0 +1,222 @@
+/******************************
+ *
+ * main.css
+ *
+ */
+
+
+/******************************
+ * RPG風フォントの追加
+ */
+@font-face {
+  font-family: PixelMplus10;
+  src: url('../fonts/PixelMplus10-Regular.eot');                                     /* IE9 Compat Modes     */
+  src: url('../fonts/PixelMplus10-Regular.eot?#iefix') format('embedded-opentype'),  /* IE6-IE8              */
+  url('../fonts/PixelMplus10-Regular.woff') format('woff'),                          /* Modern Browsers      */
+  url('../fonts/PixelMplus10-Regular.ttf') format('truetype'),                       /* Safari, Android, iOS */
+  url('../fonts/PixelMplus10-Regular.svg#svgFontName') format('svg');                /* Legacy iOS           */
+}
+
+/******************************
+ * 汎用クラス
+ */
+.validation_highlight{
+  color: red;
+}
+.text_effect01{
+  text-shadow:
+  0 1px  0 #222,
+  0 2px  0 #5e5e5e,
+  0 3px  0 #111,
+  0 4px  0 #5e5e5e,
+  0 5px  0 #000,
+  0 6px  1px rgba(0,0,0,.1),
+  0 0    5px rgba(0,0,0,.1),
+  0 1px  3px rgba(0,0,0,.3),
+  0 3px  5px rgba(0,0,0,.2),
+  0 5px  10px rgba(0,0,0,.25),
+  0 10px 10px rgba(0,0,0,.2),
+  0 20px 20px rgba(0,0,0,.15);
+}
+
+/* スプライトアニメーション（パラパラ）  */
+.parapara {
+  width:50px;
+  height:100px;
+  margin:1em auto;
+  overflow:hidden;
+  background:url(../img/para.png);
+  -moz-animation:para 5.0s steps(5,end) infinite;
+  -webkit-animation: para 5.0s steps(5,end) infinite;
+  animation:para 5.0s steps(5,end) infinite;
+}
+@-webkit-keyframes para {
+  100% {background-position:-250px;}
+}
+@-moz-keyframes para {
+  100% {background-position:-250px;}
+}
+@keyframes para {
+  100% {background-position:-250px;}
+}
+
+.opacity9 {
+  opacity: 0.9;
+}
+
+.opacity8 {
+  opacity: 0.8;
+}
+
+.opacity7 {
+  opacity: 0.7;
+}
+
+.opacity6 {
+  opacity: 0.6;
+}
+
+.opacity5 {
+  opacity: 0.5;
+}
+
+.kadomaru{
+   -moz-border-radius: 3px;    /* Firefox */
+   -webkit-border-radius: 3px; /* Safari,Chrome */
+   border-radius: 3px;         /* CSS3 */
+}
+
+
+
+
+/**************************
+ *
+ */
+
+
+html, body {
+  font-family: 'PixelMplus10',serif;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 50px, 0, 0, 0;
+}
+
+
+
+
+/*******  HEADER *******/
+
+.header{
+  position:absolute;
+  top:  0;
+  left: 0;
+  height: 50px;
+  width:  100%;
+  text-align: left;
+  background: #000;
+  color: #FFF;
+  font-size:15px;
+  border: 3px ridge #FFF;
+  display: inline-block;
+  overflow: hidden; /* はみ出た部分は隠しちゃう（応急処置）  */
+}
+
+.header .container {
+  height: 100%;
+}
+
+.header .container *{
+}
+
+.header .col-xs-12 {
+  padding:0;
+}
+
+.header img#header_icon{
+  opacity: 1.0;
+}
+
+.header .status{
+  padding:0;
+}
+
+.header .status *{
+  height: 22px;
+  line-height: 22px;
+}
+
+.header .stage *{
+  height: 100%;
+}
+
+.header #header_username{
+}
+
+.header #header_shogo{
+}
+
+
+
+
+
+/******* CONTENT *******/
+body > div.container{
+  padding-top:50px;
+}
+
+body > div.container div.col-xs-12{
+  padding:15px 0;
+}
+body > div.container h1{
+  text-align : center;
+  font-size  : 35px;
+  line-height: 55px;
+}
+body > div.container div.col-xs-12 div.col-xs-12 {
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/******* FOOTER *******/
+
+.footer{
+  background: #000;
+  color: #FFF;
+  font-size:15px;
+  border: 3px ridge #FFF;
+  overflow: hidden; /* はみ出た部分は隠しちゃう（応急処置）  */
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
+
+
+/******** HOGE ********/
+
+.boxSizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
